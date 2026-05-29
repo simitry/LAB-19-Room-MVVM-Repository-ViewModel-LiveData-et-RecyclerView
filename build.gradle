@@ -1,0 +1,14 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:9.0.1"
+    }
+}
+
+plugins {
+    // Plugins for modules are applied in their own build.gradle files.
+}

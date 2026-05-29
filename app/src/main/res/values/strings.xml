@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RoomMVVMDemo</string>
+    <string name="title_hint">Titre de la note</string>
+    <string name="description_hint">Description de la note</string>
+    <string name="add_note">AJOUTER UNE NOTE</string>
+    <string name="delete_all_notes">SUPPRIMER TOUTES LES NOTES</string>
+</resources>

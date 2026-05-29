@@ -1,0 +1,48 @@
+apply plugin: "com.android.application"
+
+android {
+    namespace "com.example.roommvvmdemo"
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.example.roommvvmdemo"
+        minSdk 24
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    /*
+     * Room = clean abstraction over SQLite.
+     * - room-runtime contains the actual Room APIs.
+     * - room-compiler generates implementation code for @Entity, @Dao, @Database.
+     * Room can return LiveData from a DAO through room-runtime.
+     * There is no separate androidx.room:room-livedata artifact in Room 2.8.4.
+     */
+    def room_version = "2.8.4"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    /*
+     * Lifecycle = ViewModel + LiveData.
+     * This lab keeps 2.9.3 because it is the stable version used by the exercise.
+     */
+    def lifecycle_version = "2.9.3"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+
+    /*
+     * ComponentActivity is a light modern Activity base.
+     * It provides LifecycleOwner and ViewModelStoreOwner without needing AppCompat.
+     */
+    implementation "androidx.activity:activity:1.13.0"
+
+    /*
+     * RecyclerView displays lists efficiently by recycling off-screen row views.
+     * CardView gives each note a simple visual container.
+     */
+    implementation "androidx.recyclerview:recyclerview:1.4.0"
+    implementation "androidx.cardview:cardview:1.0.0"
+}
